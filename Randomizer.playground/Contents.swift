@@ -26,12 +26,11 @@ func randomizer(nameArray: [String]) -> [String:String] {
     // remove that name from the array
     // pick next random name
     // remove that name from array
-        
-    if updatedArray.count % 2 == 0 {
-        print("even number")
+    
+    if nameArray.count >= 2 {
         
         for _ in updatedArray {
-    
+            
             var randIndex = Int(arc4random_uniform(UInt32(updatedArray.count)))
             let name1 = updatedArray[randIndex]
             print(name1)
@@ -45,41 +44,19 @@ func randomizer(nameArray: [String]) -> [String:String] {
             print(updatedArray.count)
             
             pairsDict[name1] = name2
-            if updatedArray.count == 0 {
+            
+            if updatedArray.count == 1 {
+                print("\(updatedArray[0]) will need to make a threesome.")
+                break
+                
+            } else if updatedArray.count == 0 {
                 break
             }
         }
         
-    }
-    
-    if updatedArray.count % 3 == 0 {
-        print("odd number")
+    } else {
         
-        if updatedArray.count > 1 {
-            
-            for _ in updatedArray {
-                
-                var randIndex = Int(arc4random_uniform(UInt32(updatedArray.count)))
-                let name1 = updatedArray[randIndex]
-                updatedArray.removeAtIndex(randIndex)
-                print(updatedArray.count)
-                
-                randIndex = Int(arc4random_uniform(UInt32(updatedArray.count)))
-                let name2 = updatedArray[randIndex]
-                updatedArray.removeAtIndex(randIndex)
-                print(updatedArray.count)
-                
-                pairsDict[name1] = name2
-                if updatedArray.count == 0 {
-                    break
-                }
-            }
-
-        } else {
-            
-            print("\(updatedArray[0]) will have to join a pair to make a threesome")
-            
-        }
+        print("You need more people to make a pair")
     }
     
     print("I made it here")
@@ -87,8 +64,7 @@ func randomizer(nameArray: [String]) -> [String:String] {
 }
 
 
-randomizer(["Andrew","Porter","Libby","Hyrum","Ty","Mike","Cory","Andy","Scott","Miles","greg"])
-
+randomizer(["Andrew","Libby","Hyrum"])
 
 
 
