@@ -9,7 +9,7 @@
         <!--Names-->
         <scene sceneID="8rx-qh-vVr">
             <objects>
-                <tableViewController id="oEI-lY-Wam" sceneMemberID="viewController">
+                <tableViewController id="oEI-lY-Wam" customClass="NamesTableViewController" customModule="Randomizer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="itz-Uy-4gQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,6 +22,7 @@
                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="28"/>
                             <state key="normal" title="Pair Me"/>
                             <connections>
+                                <action selector="pairMeButtonTapped:" destination="oEI-lY-Wam" eventType="touchUpInside" id="1Fg-qG-sIw"/>
                                 <segue destination="Vwj-I9-98I" kind="show" id="nvj-Sc-mdM"/>
                             </connections>
                         </button>
@@ -43,7 +44,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Names" id="wIe-wB-mdp">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="tk1-qh-6dD"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="tk1-qh-6dD">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="oEI-lY-Wam" id="aRN-Mz-FQj"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
