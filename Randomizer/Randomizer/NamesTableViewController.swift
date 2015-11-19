@@ -96,9 +96,10 @@ class NamesTableViewController: UITableViewController {
         alert.addAction(UIAlertAction(title: "Save", style: .Default, handler: { (action) -> Void in
             
             if let textFields = alert.textFields,
-                let name = textFields.text {
-                    
-                    NameController.sharedController.namesArray.append(name)
+                let name = textFields[0].text {
+                    print(name)
+                    NameController.sharedController.addName(name)
+                    self.tableView.reloadData()
             }
         }))
         
