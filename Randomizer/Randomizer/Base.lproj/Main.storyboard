@@ -44,6 +44,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Names" id="wIe-wB-mdp">
+                        <barButtonItem key="leftBarButtonItem" title="Clear" id="Vp9-X7-Ity">
+                            <connections>
+                                <action selector="clearButtonTapped:" destination="oEI-lY-Wam" id="Y3p-Me-skv"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="tk1-qh-6dD">
                             <connections>
                                 <action selector="addButtonTapped:" destination="oEI-lY-Wam" id="aRN-Mz-FQj"/>

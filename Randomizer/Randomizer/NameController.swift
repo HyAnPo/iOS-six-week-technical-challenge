@@ -35,6 +35,12 @@ class NameController {
         }
     }
     
+    func clearNames() {
+        
+        namesArray = []
+        print(namesArray)
+    }
+    
     func pairMe(array: [String]) {
         
         var updatedArray = namesArray

@@ -117,6 +117,11 @@ class NamesTableViewController: UITableViewController {
     
     //MARK: - Buttons
     
+    @IBAction func clearButtonTapped(sender: UIBarButtonItem) {
+        NameController.sharedController.clearNames()
+        tableView.reloadData()
+    }
+    
     @IBAction func addButtonTapped(sender: UIBarButtonItem) {
         setUpAlertController()
     }
