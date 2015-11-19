@@ -56,17 +56,17 @@
             </objects>
             <point key="canvasLocation" x="1525.5" y="374.5"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Pairs Table View Controller-->
         <scene sceneID="CTS-y1-2KV">
             <objects>
-                <tableViewController id="Vwj-I9-98I" sceneMemberID="viewController">
+                <tableViewController id="Vwj-I9-98I" customClass="PairsTableViewController" customModule="Randomizer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="GSl-Ky-Lq2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="cki-jO-Iyp">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="pairsCell" id="cki-jO-Iyp">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cki-jO-Iyp" id="7be-I2-iag">
@@ -115,6 +115,10 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="cK6-zF-2I6"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="firstPairLabel" destination="fBc-cy-1v3" id="FDN-Rh-yzg"/>
+                        <outlet property="secondPairLabel" destination="76f-tc-Apz" id="a45-IA-Z3r"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xSR-V7-KsI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

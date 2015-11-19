@@ -13,6 +13,7 @@ class NameController {
     static let sharedController = NameController()
     
     var namesArray: [String]
+    var pairsDict: [String:String] = [ : ]
     
     init() {
         
@@ -70,6 +71,7 @@ class NameController {
             }
         } else {
             // Add alert to handle error
+            print("It takes two to tango")
         }
         
         
