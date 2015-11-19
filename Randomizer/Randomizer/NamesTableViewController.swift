@@ -73,15 +73,22 @@ class NamesTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "showPairs" {
+            
+            if let pairsTableViewController = segue.destinationViewController as? PairsTableViewController {
+                
+                _ = pairsTableViewController.view
+            }
+        }
     }
-    */
     
     //MARK: - AlertControllers
     
@@ -115,6 +122,9 @@ class NamesTableViewController: UITableViewController {
     }
     
     @IBAction func pairMeButtonTapped(sender: UIButton) {
+        NameController.sharedController.pairMe(NameController.sharedController.namesArray)
+        print(NameController.sharedController.namesArray)
+        print(NameController.sharedController.pairsDict)
     }
 
 }

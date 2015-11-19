@@ -35,7 +35,7 @@ class NameController {
         }
     }
     
-    func pairMe(array: [String]) -> [String:String] {
+    func pairMe(array: [String]) {
         
         var updatedArray = namesArray
         var pairsDict: [String:String] = [ : ]
@@ -60,7 +60,7 @@ class NameController {
                     // Add alert to handle error
                     print("\(updatedArray[0]) will need to make a threesome.")
                     
-                    break
+                    updatedArray.append("")
                     
                 } else if updatedArray.count == 0 {
                     // Add alert to handle error
@@ -75,8 +75,8 @@ class NameController {
         }
         
         
-        
-        return pairsDict
+        print(pairsDict)
+        self.pairsDict = pairsDict
     }
 }
 

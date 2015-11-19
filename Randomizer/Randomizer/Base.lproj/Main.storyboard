@@ -23,7 +23,7 @@
                             <state key="normal" title="Pair Me"/>
                             <connections>
                                 <action selector="pairMeButtonTapped:" destination="oEI-lY-Wam" eventType="touchUpInside" id="1Fg-qG-sIw"/>
-                                <segue destination="Vwj-I9-98I" kind="show" id="nvj-Sc-mdM"/>
+                                <segue destination="Vwj-I9-98I" kind="show" identifier="showPairs" id="nvj-Sc-mdM"/>
                             </connections>
                         </button>
                         <prototypes>
@@ -66,7 +66,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="pairsCell" id="cki-jO-Iyp">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="pairsCell" id="cki-jO-Iyp" customClass="PairsTableViewCell" customModule="Randomizer" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cki-jO-Iyp" id="7be-I2-iag">
@@ -106,6 +106,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="firstPairLabel" destination="fBc-cy-1v3" id="uq1-q2-8kP"/>
+                                    <outlet property="secondPairLabel" destination="76f-tc-Apz" id="Eoi-t2-6nO"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -115,10 +119,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="cK6-zF-2I6"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="firstPairLabel" destination="fBc-cy-1v3" id="FDN-Rh-yzg"/>
-                        <outlet property="secondPairLabel" destination="76f-tc-Apz" id="a45-IA-Z3r"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xSR-V7-KsI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

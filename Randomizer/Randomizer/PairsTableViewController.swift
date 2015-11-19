@@ -9,9 +9,6 @@
 import UIKit
 
 class PairsTableViewController: UITableViewController {
-
-    @IBOutlet weak var firstPairLabel: UILabel!
-    @IBOutlet weak var secondPairLabel: UILabel!
     
     // An array to hold all the keys of the dictionary so I can get to them by index
     var keysArray = Array(NameController.sharedController.pairsDict.keys)
@@ -33,11 +30,13 @@ class PairsTableViewController: UITableViewController {
 
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("pairsCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("pairsCell", forIndexPath: indexPath) as! PairsTableViewCell
         
         
         let name1 = keysArray[indexPath.row]
-        let name2 = valueForKey(name1)
+        let name2 = NameController.sharedController.pairsDict[name1]
+        
+        cell.updateWithNames(name1, name2: name2!)
         
         
         
