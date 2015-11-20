@@ -66,7 +66,7 @@ class NameController {
                     // Add alert to handle error
                     print("\(updatedArray[0]) will need to make a threesome.")
                     
-                    updatedArray.append("")
+                    updatedArray.append("Join another piar")
                     
                 } else if updatedArray.count == 0 {
                     // Add alert to handle error
