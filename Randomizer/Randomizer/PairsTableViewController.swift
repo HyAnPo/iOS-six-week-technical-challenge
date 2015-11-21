@@ -42,6 +42,14 @@ class PairsTableViewController: UITableViewController {
         
         return cell
     }
+    
+    //MARK: - Buttons
+    
+    @IBAction func shuffleButtonTapped(sender: UIBarButtonItem) {
+        
+        NameController.sharedController.pairMe(NameController.sharedController.namesArray)
+        self.tableView.reloadData()
+    }
 
 
     /*

@@ -122,7 +122,13 @@
                             <outlet property="delegate" destination="Vwj-I9-98I" id="1Cz-C9-rYx"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="cK6-zF-2I6"/>
+                    <navigationItem key="navigationItem" id="cK6-zF-2I6">
+                        <barButtonItem key="rightBarButtonItem" title="Shuffle" id="IBy-2t-2Q9">
+                            <connections>
+                                <action selector="shuffleButtonTapped:" destination="Vwj-I9-98I" id="JlO-qm-r2u"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xSR-V7-KsI" userLabel="First Responder" sceneMemberID="firstResponder"/>
